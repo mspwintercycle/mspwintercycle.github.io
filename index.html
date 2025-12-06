@@ -26,44 +26,64 @@
     </style>
   </head>
   <body>
-    <h1>Welcome to my website on MSP winter cycling conditions!</h1>
-    <button onclick="toggleDarkMode()">Toggle dark mode</button>
-    <p>Hello there! My name is Owen and I wanted to have a place where people can collectively report on cycling conditions in the Twin Cities metro without having to rely on social media. My main focus has been protected bicycle infrastructure.</p>
-    <h2>How will this work?</h2>
-    <p>The way this works is (at least for now, until I come up with a more sophisticated way to do this) to manually update the embedded map you see below. On this map, you should be able to see sections of bike trail that are <b>bold.</b> These lines will be <b>thicker</b> than the rest, and if you click on these segments it should give a trail status. I will also put text below in case you don't want to navigate the map.</p>
-    <p>Lastly, keep in mind that these are opinions of myself and the people submitting. Based on the bikes people have or their comfort level, these subjective descriptions might clash another's experience.</p>
-    <h3>The map will be cleared after heavy snowfall.</h3>
-    <p>On this page, I will remove the segments from the embedded map if we get over 2 inches of snowfall. The reason I picked that number is because that is the threshold at which the MPRB starts plowing, and it will take time for everyone else to plow as well. I will make a note in the "Reports" section that a snow event occurred (based on how much snow we get), but I will keep the written reports. Part of my reasoning behind this is that, reports from before the snow event will not be particularly useful. Reach out to me if you have a different view, I want to make this site as useful as possible!</p>
-    <h3>Suggestions for submitting</h3>
-    <ol>
-      <li>Tell me about your bike. Tire size, tire width, and whether or not you have studs are the most important.</li>
-      <li>Describe your route. This can be in any form, whether it be a screenshot of your route mapped out, a Strava link, a Ride with GPS link, or you can just type it out to me. For example, if you say, "I took Mississippi River Blvd from Marshall Ave to Pelham Blvd, and I turned at Franklin. The conditions were .....", that is okay with me. It doesn't have to be detailed either if you don't have time. I understand not everyone wants to describe everything in detail!</li>
-    </ol>
-    <p><b style="color: lawngreen; background-color: black;">Green</b> lines on the map represent bike trails that are <b>fully</b> plowed.</p>
-    <p><b style="color: orange; background-color: black;">Orange</b> lines on the map represent bike trails that are <b>partially</b> plowed. This color will be used for trail reports during snow events and the time between being plowed.</p>
-    <p><b style="color: yellow; background-color: black;">Yellow</b> lines on the map represent bike trails that are <b>unplowed</b>.</p>
-    <h2>Can I report something that isn't a bike path/off street bike facility?</h2>
-    <p>If you want to, of course. In my experience, painted bike lanes often become treacherous in the winter with a combination of slush, ice, and compacted snow. During snow events, however, roads usually get plowed first, so that information could be useful!</p>
-    <p>I have had better success with plowing on "bicycle boulevards," such as 40th St (RiverLake Greenway). Information on these roads throughout the Twin Cities (usually they have "BLVD" painted on the asphalt) would be helpful in my opinion.</p>
-    <h2>How do you handle privacy?</h2>
-    <p>I would encourage everyone submitting information to me to keep in mind this website is public. I won't include names of people who send things to me, and feel free to omit any part of your ride that could identify where you live. Since I don't know that information and will upload what you send me, just be mindful.</p>    
-    <h2>How do I contact you to update this website?</h2>
-    <p>Just like the good old days, send me an email. I will work to update this site quickly. Email me at <a href="mailto:mspwintercycle@gmail.com">mspwintercycle@gmail.com.</a> If you have any suggestions on how to improve this website, please let me know! Obviously having something more automated would be nice, but that seemed like a lot of work, and I wanted to get something up and running.</p>
+    <div id="welcome">
+      <h1>Welcome to my website on MSP winter cycling conditions!</h1>
+      <button onclick="toggleDarkMode()">Toggle dark mode</button>
+      <p>Hello there! My name is Owen and I wanted to have a place where people can collectively report on cycling conditions in the Twin Cities metro without having to rely on social media. My main focus has been protected bicycle infrastructure.</p>
+    </div>
+
+    <div id="site_info">
+      <h2>How will this work?</h2>
+      <p>The way this works is (at least for now, until I come up with a more sophisticated way to do this) to manually update the embedded map you see below. On this map, you should be able to see sections of bike trail that are <b>bold.</b> These lines will be <b>thicker</b> than the rest, and if you click on these segments it should give a trail status. I will also put text below in case you don't want to navigate the map.</p>
+      <p>Lastly, keep in mind that these are opinions of myself and the people submitting. Based on the bikes people have or their comfort level, these subjective descriptions might clash another's experience.</p>
+      <h3>The map will be cleared after heavy snowfall.</h3>
+      <p>On this page, I will remove the segments from the embedded map if we get over 2 inches of snowfall. The reason I picked that number is because that is the threshold at which the MPRB starts plowing, and it will take time for everyone else to plow as well. I will make a note in the "Reports" section that a snow event occurred (based on how much snow we get), but I will keep the written reports. Part of my reasoning behind this is that, reports from before the snow event will not be particularly useful. Reach out to me if you have a different view, I want to make this site as useful as possible!</p>
+      <h3>Suggestions for submitting</h3>
+      <ol>
+        <li>Tell me about your bike. Tire size, tire width, and whether or not you have studs are the most important.</li>
+        <li>Describe your route. This can be in any form, whether it be a screenshot of your route mapped out, a Strava link, a Ride with GPS link, or you can just type it out to me. For example, if you say, "I took Mississippi River Blvd from Marshall Ave to Pelham Blvd, and I turned at Franklin. The conditions were .....", that is okay with me. It doesn't have to be detailed either, <b>if you don't have time, just tell me the longest parts of your ride.</b> I understand not everyone wants to describe everything in detail!</li>
+      </ol>
+      <p><b style="color: lawngreen; background-color: black;">Green</b> lines on the map represent bike trails that are <b>fully</b> plowed.</p>
+      <p><b style="color: orange; background-color: black;">Orange</b> lines on the map represent bike trails that are <b>partially</b> plowed. This color will be used for trail reports during snow events and the time between being plowed.</p>
+      <p><b style="color: yellow; background-color: black;">Yellow</b> lines on the map represent bike trails that are <b>unplowed</b>.</p>
+    </div>
+
+    <div id="contact">
+      <h2>How do I contact you to update this website?</h2>
+      <p>Just like the good old days, send me an email. I will work to update this site quickly. Email me at <a href="mailto:mspwintercycle@gmail.com">mspwintercycle@gmail.com.</a> If you have any suggestions on how to improve this website, please let me know! Obviously having something more automated would be nice, but that seemed like a lot of work, and I wanted to get something up and running.</p>    
+    </div>
+
+    <div id="roadcycling">
+      <h2>Can I report something that isn't a bike path/off street bike facility?</h2>
+      <p>If you want to, of course. In my experience, painted bike lanes often become treacherous in the winter with a combination of slush, ice, and compacted snow. During snow events, however, roads usually get plowed first, so that information could be useful!</p>
+      <p>I have had better success with plowing on "bicycle boulevards," such as 40th St (RiverLake Greenway). Information on these roads throughout the Twin Cities (usually they have "BLVD" painted on the asphalt) would be helpful in my opinion.</p>
+    </div>
+
+    <div id="privacy">
+      <h2>How do you handle privacy?</h2>
+      <p>I would encourage everyone submitting information to me to keep in mind this website is public. I won't include names of people who send things to me, and feel free to omit any part of your ride that could identify where you live. Since I don't know that information and will upload what you send me, just be mindful.</p>    
+    </div>
+
+    <div id="resources">
     <h2>Resources</h2>
-    <p><a href="https://minneapolisparks.maps.arcgis.com/apps/instant/media/index.html?appid=68cea5d51bd7468db03e0b84609f6dbb">MPRB plowing status map</a></p>
-	  <p><a href="https://www.threeriversparks.org/page/winter-trail-maintenance">Three Rivers Park District plowing information - phone number on page for issues</a></p>
-	  <p><a href="https://www.minneapolismn.gov/report-an-issue/sidewalk-snow-ice/">Report snow clearing issues in Minneapolis</a></p>
-    <p><a href="https://www.stpaul.gov/departments/public-works/street-maintenance/snow-emergency/sidewalk-snow-shoveling">Report snow clearing issues in St. Paul</a></p>
-    <p><a href="http://iframe.publicstuff.com/#?client_id=1310#top-pick">Report snow clearing issues in St. Louis Park</a></p>
-    <p><a href="https://www.edinamn.gov/891/Report-a-Problem-on-Edina-311">Report snow clearing issues in Edina</a></p>
-    <p><a href="https://www.richfieldmn.gov/departments/public_works/report_a_problem.php">Report snow clearing issues in Richfield (public works generic home page, select snow plowing category)</a></p>
-    <p><a href="https://cityofeagan.com/request">Report snow clearing issues in Eagan (issue report page, select snow plowing category)</a></p>
-    <p><a href="https://www.bloomingtonmn.gov/mnt/snow-removal-and-snow-emergency-information">Bloomington snow clearing information</a></p>
-    <p><a href="https://www.goldenvalleymn.gov/344/Street-Maintenance">Golden Valley snow clearing information</a></p>
-    <p><a href="https://www.hopkinsmn.com/406/Snow-Sidewalks">Hopkins snow clearing information</a></p>
-	  <h3>It is currently snowing! Expect the below reports to not fully reflect reality, as snow is accumulating right now and conditions can change.</h3>
-    <iframe style="width: 50%; height: 50%; border: 0;" allowfullscreen allow="geolocation" src="https://umap.openstreetmap.fr/en/map/msp-winter-cycle-conditions_1327075#13/44.9590/-93.2056"></iframe>
-    <p><a href="https://umap.openstreetmap.fr/en/map/msp-winter-cycle-conditions_1327075#13/44.9590/-93.2056">Open full map</a></p>
+      <p><a href="https://minneapolisparks.maps.arcgis.com/apps/instant/media/index.html?appid=68cea5d51bd7468db03e0b84609f6dbb">MPRB plowing status map</a></p>
+      <p><a href="https://www.threeriversparks.org/page/winter-trail-maintenance">Three Rivers Park District plowing information - phone number on page for issues</a></p>
+      <p><a href="https://www.minneapolismn.gov/report-an-issue/sidewalk-snow-ice/">Report snow clearing issues in Minneapolis</a></p>
+      <p><a href="https://www.stpaul.gov/departments/public-works/street-maintenance/snow-emergency/sidewalk-snow-shoveling">Report snow clearing issues in St. Paul</a></p>
+      <p><a href="http://iframe.publicstuff.com/#?client_id=1310#top-pick">Report snow clearing issues in St. Louis Park</a></p>
+      <p><a href="https://www.edinamn.gov/891/Report-a-Problem-on-Edina-311">Report snow clearing issues in Edina</a></p>
+      <p><a href="https://www.richfieldmn.gov/departments/public_works/report_a_problem.php">Report snow clearing issues in Richfield (public works generic home page, select snow plowing category)</a></p>
+      <p><a href="https://cityofeagan.com/request">Report snow clearing issues in Eagan (issue report page, select snow plowing category)</a></p>
+      <p><a href="https://www.bloomingtonmn.gov/mnt/snow-removal-and-snow-emergency-information">Bloomington snow clearing information</a></p>
+      <p><a href="https://www.goldenvalleymn.gov/344/Street-Maintenance">Golden Valley snow clearing information</a></p>
+      <p><a href="https://www.hopkinsmn.com/406/Snow-Sidewalks">Hopkins snow clearing information</a></p>
+    </div>
+
+    <div id="conditionsmap">
+      <iframe style="width: 50%; height: 50%; border: 0;" allowfullscreen allow="geolocation" src="https://umap.openstreetmap.fr/en/map/msp-winter-cycle-conditions_1327075#13/44.9590/-93.2056"></iframe>
+      <p><a href="https://umap.openstreetmap.fr/en/map/msp-winter-cycle-conditions_1327075#13/44.9590/-93.2056">Open full map</a></p>
+    </div>
+
     <script>
       function toggleDarkMode() {
         // if the user prefers dark, toggle the opposite
@@ -76,105 +96,147 @@
         }        
       }
     </script>
-    <h2>Reports</h2>
-	  <h3>2025-12-5</h3>
-    <ul>
-      <li><b>42nd St</b></li>
-      <ul>
-	      <li><em>Between West River Pkwy and Hiawatha Ave</em> Riding on the road for this segment. Road is not fully plowed, but riding in the tire tracks is adequate. The unplowed snow is mushy.</li>
-      </ul>
-      <li><b>Hiawatha LRT Trail</b></li>
-      <ul>
-	      <li><em>From 38th St to 46th St</em> Snow is starting to build up on this trail, but it is still rideable with 38mm/30mm studded tires. Snow depth right now is about a 0.2 inch.</li>
-      </ul>
-      <li><b>29th Ave NE</b></li>
-      <ul>
-        <li><em>From Stinson Blvd to Central Ave</em> Clear and doable on normal bike tires.</li>
-      </ul>
-      <li><b>37th Ave NE</b></li>
-      <ul>
-        <li><em>From Stinson Blvd to Central Ave</em> Clear and doable on normal bike tires.</li>
-      </ul>
-    </ul>
-    <h3>2025-12-4</h3>
-    <ul>
-      <li><b>Hennepin Ave NE & 1st Ave NE Bikeway</b></li>
-      <ul>
-	      <li>29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
-      </ul>
-      <li><b>West River Pkwy</b></li>
-      <ul>
-	      <li><em>from Hennepin Ave to Cedar Lake Trail</em> 29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
-      </ul>
-      <li><b>Cedar Lake Trail</b></li>
-      <ul>
-	      <li><em>from west river pkwy to Target Field</em> 29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
-      </ul>
-    </ul>
-    <h3>2025-12-3</h3>
-    <ul>
-      <li><b>35E Parkway</b></li>
-      <ul>
-	      <li>well plowed, packed snow. crosswalks were mostly plowed. however, the parts where you share the road, the st. paul roads are mushy and i didnt always feel stable on the side streets. i opted to take the sidewalk in some of these parts.</li>
-      </ul>
-      <li><b>Ayd Mill Road Bikeway</b></li>
-      <ul>
-	      <li><em>exited at Ashland Ave</em> well plowed, however some parts were uneven. some snow did not feel well packed, which just resulted in more effort for me, i personally did not feel unstable on my 30mm studded tires.</li>
-      </ul>
-      <li><b>West River Pkwy</b></li>
-      <ul>
-	      <li><em>Lake St to Minnehaha Falls</em> well plowed packed snow. Some patches of ice here and there</li>
-      </ul>      
-    </ul>
-    <h3>2025-12-1</h3>
-    <ul>
-      <li><b>Capitol City Bikeway</b></li>
-      <ul>
-	      <li><em>7th to Kellogg on Jackson, Sibley to Wabasha on Kellogg</em> well plowed, not much snow on this trail.</li>
-      </ul>
-      <li><b>Wabasha Bridge</b></li>
-      <ul>
-	      <li>Clear of snow</li>
-      </ul>
-      <li><b>Plato Blvd</b></li>
-      <ul>
-	      <li><em>Wabasha to Doctor Justus Ohage Blvd</em> well plowed packed snow, little ice</li>
-      </ul>
-      <li><b>Lilydale Regional Park Trail</b></li>
-      <ul>
-	      <li>well plowed packed snow, little ice. some uneven plowing spots where the trail becomes uneven, but felt safe and manageable on 30mm studded tires.</li>
-      </ul>
-      <li><b>Big Rivers Regional Trail</b></li>
-      <ul>
-	      <li><em>Lilydale to Mendota Bridge</em> well plowed packed snow, little ice. trail is smooth and didnt notice much uneven plowing.</li>
-      </ul>
-      <li><b>Minnehaha Trail</b></li>
-      <ul>
-	      <li><em>Fort Snelling State Park to 54th St</em> Unplowed, and will remain unplowed for the season.</li>
-	      <li><em>54th St to Gofrey Pkwy</em> well plowed packed snow, with serviceable crosswalks.</li>
-      </ul>
-      <li><b>Hiawatha MnDOT Trail</b></li>
-      <ul>
-	      <li><em>Fort Snelling to South Minnehaha Park Drive</em> plowed, but somewhat uneven. There is a strip in the middle of the trail from when the plows came through that can be annoying. Didn't notice much ice here, but felt fine on 30mm studded tires.</li>
-      </ul>      
-    </ul>
-    <h3>2025-11-30</h3>
-    <ul>
-      <li><b>Hiawatha LRT Trail</b></li>
-      <ul>
-	      <li><em>11th Ave S to 46th St Station</em>Plowed, but uneven at some points and has ice patches. South of Lake St, I noticed one side of the trail had slightly deeper snow than the other. It didn't feel unsafe, but it felt like I was putting more effort in than normally packed snow. I thought it was okay on 30mm studded tires. North of Lake St, the snow depth felt more consistent but there were still ice patches throughout the trail.</li>
-      </ul>
-      <li><b>11th Ave S Bikeway</b></li>
-      <ul>
-	      <li><em>W River Pkwy to Hiawatha LRT Trail</em> plowed and slightly packed, however, some crosswalks were not well plowed and had to get over a snow bank at a couple places.</li>
-      </ul>
-      <li><b>Midtown Greenway</b></li>
-      <ul>
-	      <li><em>Hiawatha to Dean Pkwy</em>A mix of bare pavement, ice, and snow. Stay alert on this trail especially since it gets more traffic than average, I noticed pretty frequent ice patches. Overall good on 30mm studded tires.</li>
-      </ul>
-      <li><b>North Cedar Lake Regional Trail</b></li>
-      <ul>
-	      <li><em>Cedar Lake Pkwy to Virginia Ave</em>Well plowed packed snow, I felt safe on 30mm studded tires and did not notice too much ice.</li>
-    </ul>
+
+    <div id="reports">
+      <h2>Reports</h2>
+      <div id="2025125">
+        <h3>2025-12-5</h3>
+        <h4>As of 12pm, it snowed 1.1 inches at MSP airport.</h4>
+        <ul>
+          <li><b>38th St</b></li>
+          <ul>
+            <li><em>Between West River Pkwy and Hiawatha Ave</em> Bike lane is completely gone and the road has a light layer of slush. Surrounding side streets that aren't main roads like this one are even more slushy and mushy than here. Since there was little slush on 38th St, however, I felt confident riding with 38mm/30mm studded tires.</li>
+          </ul>
+          <li><b>42nd St</b></li>
+          <ul>
+            <li><em>Between West River Pkwy and Hiawatha Ave</em> Riding on the road for this segment. Road is not fully plowed, but riding in the tire tracks is adequate. The unplowed snow is mushy.</li>
+          </ul>
+          <li><b>Hiawatha LRT Trail</b></li>
+          <ul>
+            <li><em>From 38th St to 46th St</em> Snow is starting to build up on this trail, but it is still rideable with 38mm/30mm studded tires. Snow depth at 9am now is about a 0.2 inch.</li>
+          </ul>
+          <li><b>Lake Nokomis-Minnesota River Regional Trail</b></li>
+          <ul>
+            <li><em>From Richfield Pkwy to Lake Nokomis Pkwy</em> Well plowed, with a couple of uneven spots where the snow is deep (like under the MN-77 bridge). Parts of it, especially from 66th to Lake Nokomis Pkwy, are salted. So I barely saw any snow there at all. I didn't bike on it for long, but 76th St looked plowed looking the other direction.</li>
+          </ul>
+          <li><b>West Lake Nokomis Pkwy</b></li>
+          <ul>
+            <li><em>From southern entrance at Cedar Ave to 22nd Ave S</em> The plowing that was done earlier this week has been snowed on, walked on, and it isn't very good. It felt slippery and bumpy the whole time. This would best be conquered on a fat tire bike, which I don't have. My 38mm/30mm studded tires were tough for this.</li>
+          </ul>
+          <li><b>East Minnehaha Pkwy</b></li>
+          <ul>
+            <li><em>From 22nd Ave S to Lake Hiawatha</em> Packed snow and well plowed. Feels like it was done today, on 38mm/30mm studded tires I felt confident on this portion. A few spots on the minnehaha creek trail intersected with bridges that were unplowed, but for the most part, good.</li>
+          </ul>
+          <li><b>Minnehaha Creek Trail</b></li>
+          <ul>
+            <li><em>From Lake Hiawatha to Godfrey Pkwy</em> Packed snow and well plowed. Feels like it was done today, on 38mm/30mm studded tires I felt confident on this portion. A few spots on the minnehaha creek trail intersected with bridges that were unplowed, but for the most part, good.</li>
+          </ul>
+          <li><b>Godfrey Pkwy</b></li>
+          <ul>
+            <li><em>From Minnehaha Ave to 46th St</em> Packed snow and well plowed. Feels like it was done today, on 38mm/30mm studded tires I felt confident on this portion. A few spots on the minnehaha creek trail intersected with bridges that were unplowed, but for the most part, good.</li>
+          </ul>
+          <li><b>West River Pkwy</b></li>
+          <ul>
+            <li><em>From 46th St to 38th St</em> Leftover plowing job earlier this week is getting worse, unfortunately. I biked in the tracks of a few fat tire bikers in my 38mm/30mm studded tires. It was better packed than Nokomis, but my rear wheel was slipping a little.</li>
+          </ul>
+          <li><b>29th Ave NE</b></li>
+          <ul>
+            <li><em>From Stinson Blvd to Central Ave</em> Clear and doable on normal bike tires.</li>
+          </ul>
+          <li><b>37th Ave NE</b></li>
+          <ul>
+            <li><em>From Stinson Blvd to Central Ave</em> Clear and doable on normal bike tires.</li>
+          </ul>
+        </ul>
+      </div>
+      <div id="2025124">
+        <h3>2025-12-4</h3>
+        <ul>
+          <li><b>Hennepin Ave NE & 1st Ave NE Bikeway</b></li>
+          <ul>
+            <li>29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
+          </ul>
+          <li><b>West River Pkwy</b></li>
+          <ul>
+            <li><em>from Hennepin Ave to Cedar Lake Trail</em> 29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
+          </ul>
+          <li><b>Cedar Lake Trail</b></li>
+          <ul>
+            <li><em>from west river pkwy to Target Field</em> 29x2.4" tire (unicycle) plowed, but there are big patches of ice + packed snow basically along the whole route. There aren't any notable patches of pure ice, as all the ice I've noticed has some packed snow on top or mingled in. You will be riding over some bumpy packed snow with the occasional stretches of exposed pavement.</li>
+          </ul>
+        </ul>
+      </div>
+      <div id="2025123">
+      <h3>2025-12-3</h3>
+        <ul>
+          <li><b>35E Parkway</b></li>
+          <ul>
+            <li>well plowed, packed snow. crosswalks were mostly plowed. however, the parts where you share the road, the st. paul roads are mushy and i didnt always feel stable on the side streets. i opted to take the sidewalk in some of these parts.</li>
+          </ul>
+          <li><b>Ayd Mill Road Bikeway</b></li>
+          <ul>
+            <li><em>exited at Ashland Ave</em> well plowed, however some parts were uneven. some snow did not feel well packed, which just resulted in more effort for me, i personally did not feel unstable on my 30mm studded tires.</li>
+          </ul>
+          <li><b>West River Pkwy</b></li>
+          <ul>
+            <li><em>Lake St to Minnehaha Falls</em> well plowed packed snow. Some patches of ice here and there</li>
+          </ul>      
+        </ul>
+      </div>
+      <div id="2025121">
+        <h3>2025-12-1</h3>
+        <ul>
+          <li><b>Capitol City Bikeway</b></li>
+          <ul>
+            <li><em>7th to Kellogg on Jackson, Sibley to Wabasha on Kellogg</em> well plowed, not much snow on this trail.</li>
+          </ul>
+          <li><b>Wabasha Bridge</b></li>
+          <ul>
+            <li>Clear of snow</li>
+          </ul>
+          <li><b>Plato Blvd</b></li>
+          <ul>
+            <li><em>Wabasha to Doctor Justus Ohage Blvd</em> well plowed packed snow, little ice</li>
+          </ul>
+          <li><b>Lilydale Regional Park Trail</b></li>
+          <ul>
+            <li>well plowed packed snow, little ice. some uneven plowing spots where the trail becomes uneven, but felt safe and manageable on 30mm studded tires.</li>
+          </ul>
+          <li><b>Big Rivers Regional Trail</b></li>
+          <ul>
+            <li><em>Lilydale to Mendota Bridge</em> well plowed packed snow, little ice. trail is smooth and didnt notice much uneven plowing.</li>
+          </ul>
+          <li><b>Minnehaha Trail</b></li>
+          <ul>
+            <li><em>Fort Snelling State Park to 54th St</em> Unplowed, and will remain unplowed for the season.</li>
+            <li><em>54th St to Gofrey Pkwy</em> well plowed packed snow, with serviceable crosswalks.</li>
+          </ul>
+          <li><b>Hiawatha MnDOT Trail</b></li>
+          <ul>
+            <li><em>Fort Snelling to South Minnehaha Park Drive</em> plowed, but somewhat uneven. There is a strip in the middle of the trail from when the plows came through that can be annoying. Didn't notice much ice here, but felt fine on 30mm studded tires.</li>
+          </ul>      
+        </ul>
+      </div>
+      <div id="20251130">
+        <h3>2025-11-30</h3>
+        <ul>
+          <li><b>Hiawatha LRT Trail</b></li>
+          <ul>
+            <li><em>11th Ave S to 46th St Station</em>Plowed, but uneven at some points and has ice patches. South of Lake St, I noticed one side of the trail had slightly deeper snow than the other. It didn't feel unsafe, but it felt like I was putting more effort in than normally packed snow. I thought it was okay on 30mm studded tires. North of Lake St, the snow depth felt more consistent but there were still ice patches throughout the trail.</li>
+          </ul>
+          <li><b>11th Ave S Bikeway</b></li>
+          <ul>
+            <li><em>W River Pkwy to Hiawatha LRT Trail</em> plowed and slightly packed, however, some crosswalks were not well plowed and had to get over a snow bank at a couple places.</li>
+          </ul>
+          <li><b>Midtown Greenway</b></li>
+          <ul>
+            <li><em>Hiawatha to Dean Pkwy</em>A mix of bare pavement, ice, and snow. Stay alert on this trail especially since it gets more traffic than average, I noticed pretty frequent ice patches. Overall good on 30mm studded tires.</li>
+          </ul>
+          <li><b>North Cedar Lake Regional Trail</b></li>
+          <ul>
+            <li><em>Cedar Lake Pkwy to Virginia Ave</em>Well plowed packed snow, I felt safe on 30mm studded tires and did not notice too much ice.</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
