@@ -29,6 +29,7 @@
     <div id="welcome">
       <h1>Welcome to my website on MSP winter cycling conditions!</h1>
       <button onclick="toggleDarkMode()">Toggle dark mode</button>
+      <p><a href="" id="recentlink">Link to most recent report</a></p>
       <p>Hello there! My name is Owen and I wanted to have a place where people can collectively report on cycling conditions in the Twin Cities metro without having to rely on social media. My main focus has been protected bicycle infrastructure.</p>
     </div>
 
@@ -84,22 +85,9 @@
       <p><a href="https://umap.openstreetmap.fr/en/map/msp-winter-cycle-conditions_1327075#13/44.9590/-93.2056">Open full map</a></p>
     </div>
 
-    <script>
-      function toggleDarkMode() {
-        // if the user prefers dark, toggle the opposite
-        const a = window.matchMedia("(prefers-color-scheme: dark)");
-        var root = document.querySelector(":root");
-        if (a) {
-          root.classList.toggle("light");
-        } else {
-          root.classList.toggle("dark");
-        }        
-      }
-    </script>
-
     <div id="reports">
       <h2>Reports</h2>
-      <div id="2025125">
+      <div id="20251205">
         <h3>2025-12-5</h3>
         <h4>As of 12pm, it snowed 1.1 inches at MSP airport.</h4>
         <ul>
@@ -149,7 +137,7 @@
           </ul>
         </ul>
       </div>
-      <div id="2025124">
+      <div id="20251204">
         <h3>2025-12-4</h3>
         <ul>
           <li><b>Hennepin Ave NE & 1st Ave NE Bikeway</b></li>
@@ -166,7 +154,7 @@
           </ul>
         </ul>
       </div>
-      <div id="2025123">
+      <div id="20251203">
       <h3>2025-12-3</h3>
         <ul>
           <li><b>35E Parkway</b></li>
@@ -183,7 +171,7 @@
           </ul>      
         </ul>
       </div>
-      <div id="2025121">
+      <div id="20251201">
         <h3>2025-12-1</h3>
         <ul>
           <li><b>Capitol City Bikeway</b></li>
@@ -238,5 +226,40 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      function toggleDarkMode() {
+        // if the user prefers dark, toggle the opposite
+        const a = window.matchMedia("(prefers-color-scheme: dark)");
+        var root = document.querySelector(":root");
+        if (a) {
+          root.classList.toggle("light");
+        } else {
+          root.classList.toggle("dark");
+        }        
+      }
+
+      function getMostRecentReportDiv() {
+        // get all reports
+        const report_divs = document.querySelectorAll("div#reports > div");
+        console.warn(report_divs)
+        let max = 0;
+        for (report of report_divs) {
+          const date = parseInt(report.id);          
+          if (date == NaN) {
+            console.warn("One of the reports divs is not a number!");            
+          } else {
+            if (date > max) {
+              max = date;
+            }
+          }
+        }
+
+        return "#" + max.toString();
+      }
+
+      // Fill link at the top with reference to most recent report
+      document.getElementById('recentlink').href = getMostRecentReportDiv()
+    </script>    
   </body>
 </html>
