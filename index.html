@@ -3,27 +3,7 @@
     <title>MSP cycle conditions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme">
-    <style>
-      @media (prefers-color-scheme: dark) {
-        :root {
-          color-scheme: dark;
-        }
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-          color-scheme: light;
-        }
-      }
-
-      .dark {
-        color-scheme: dark;
-      }
-
-      .light {
-        color-scheme: light;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="welcome">
@@ -31,6 +11,7 @@
       <button onclick="toggleDarkMode()">Toggle dark mode</button>
       <p><a href="" id="recentlink">Link to most recent report</a></p>
       <p>Hello there! My name is Owen and I wanted to have a place where people can collectively report on cycling conditions in the Twin Cities metro without having to rely on social media. My main focus has been protected bicycle infrastructure.</p>
+      <p><a href="aboutme.html">About me</a></p>
     </div>
 
     <div id="site_info">
@@ -454,40 +435,6 @@
         </ul>
       </div>
     </div>
-
-    <script>
-      function toggleDarkMode() {
-        // if the user prefers dark, toggle the opposite
-        const a = window.matchMedia("(prefers-color-scheme: dark)");
-        var root = document.querySelector(":root");
-        if (a) {
-          root.classList.toggle("light");
-        } else {
-          root.classList.toggle("dark");
-        }        
-      }
-
-      function getMostRecentReportDiv() {
-        // get all reports
-        const report_divs = document.querySelectorAll("div#reports > div");
-        console.warn(report_divs)
-        let max = 0;
-        for (report of report_divs) {
-          const date = parseInt(report.id);          
-          if (date == NaN) {
-            console.warn("One of the reports divs is not a number!");            
-          } else {
-            if (date > max) {
-              max = date;
-            }
-          }
-        }
-
-        return "#" + max.toString();
-      }
-
-      // Fill link at the top with reference to most recent report
-      document.getElementById('recentlink').href = getMostRecentReportDiv()
-    </script>    
+    <script src="main.js"></script>
   </body>
 </html>

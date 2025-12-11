@@ -1,0 +1,19 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+      color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      color-scheme: light;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}
