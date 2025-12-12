@@ -12,7 +12,6 @@ function toggleDarkMode() {
 function getMostRecentReportDiv() {
   // get all reports
   const report_divs = document.querySelectorAll("div#reports > div");
-  console.warn(report_divs)
   let max = 0;
   for (report of report_divs) {
     const date = parseInt(report.id);          
@@ -30,3 +29,21 @@ function getMostRecentReportDiv() {
 
 // Fill link at the top with reference to most recent report
 document.getElementById('recentlink').href = getMostRecentReportDiv();
+
+// Select the right font, default is Helvetica
+const FONT_STORAGE_NAME = "fontpref";
+let font = 'Helvetica';
+let localPref = localStorage.getItem(FONT_STORAGE_NAME);
+if (localPref != null) {
+  font = localPref;
+}
+
+document.body.style.fontFamily = font;
+
+// Watch for onchange event for font
+const selectElement = document.querySelector("#fontselect");
+selectElement.addEventListener("change", (event) => {
+  // Remember old font
+  localStorage.setItem(FONT_STORAGE_NAME, event.target.value);
+  document.body.style.fontFamily = event.target.value;
+});
