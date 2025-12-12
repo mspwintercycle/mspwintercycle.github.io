@@ -28,22 +28,23 @@ function getMostRecentReportDiv() {
 }
 
 // Fill link at the top with reference to most recent report
-document.getElementById('recentlink').href = getMostRecentReportDiv();
+document.getElementById("recentlink").href = getMostRecentReportDiv();
 
 // Select the right font, default is Helvetica
 const FONT_STORAGE_NAME = "fontpref";
-let font = 'Helvetica';
+const styleMap = {"Helvetica": "Helvetica, Arial, sans-serif", "Arial": "Arial, sans-serif", "Georgia": "Georgia, serif", "Times New Roman": "Times New Roman, serif"};
+let font = "Helvetica";
 let localPref = localStorage.getItem(FONT_STORAGE_NAME);
 if (localPref != null) {
   font = localPref;
 }
 
-document.body.style.fontFamily = font;
+document.body.style.fontFamily = styleMap[font];
 
 // Watch for onchange event for font
 const selectElement = document.querySelector("#fontselect");
 selectElement.addEventListener("change", (event) => {
   // Remember old font
   localStorage.setItem(FONT_STORAGE_NAME, event.target.value);
-  document.body.style.fontFamily = event.target.value;
+  document.body.style.fontFamily = styleMap[event.target.value];
 });
