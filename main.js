@@ -6,7 +6,7 @@ function toggleDarkMode() {
     root.classList.toggle("light");
   } else {
     root.classList.toggle("dark");
-  }        
+  }
 }
 
 function getMostRecentReportDiv() {
@@ -14,9 +14,9 @@ function getMostRecentReportDiv() {
   const report_divs = document.querySelectorAll("div#reports > div");
   let max = 0;
   for (report of report_divs) {
-    const date = parseInt(report.id);          
+    const date = parseInt(report.id);
     if (date == NaN) {
-      console.warn("One of the reports divs is not a number!");            
+      console.warn("One of the reports divs is not a number!");
     } else {
       if (date > max) {
         max = date;
