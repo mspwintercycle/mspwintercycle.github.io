@@ -28,7 +28,17 @@ function getMostRecentReportDiv() {
 }
 
 // Fill link at the top with reference to most recent report
-document.getElementById("recentlink").href = getMostRecentReportDiv();
+if (document.title == "MSP cycle conditions") {
+  document.getElementById("recentlink").href = getMostRecentReportDiv();
+
+  // Watch for onchange event for font
+  const selectElement = document.querySelector("#fontselect");
+  selectElement.addEventListener("change", (event) => {
+    // Remember old font
+    localStorage.setItem(FONT_STORAGE_NAME, event.target.value);
+    document.body.style.fontFamily = styleMap[event.target.value];
+  });
+}
 
 // Select the right font, default is Helvetica
 const FONT_STORAGE_NAME = "fontpref";
@@ -40,11 +50,3 @@ if (localPref != null) {
 }
 
 document.body.style.fontFamily = styleMap[font];
-
-// Watch for onchange event for font
-const selectElement = document.querySelector("#fontselect");
-selectElement.addEventListener("change", (event) => {
-  // Remember old font
-  localStorage.setItem(FONT_STORAGE_NAME, event.target.value);
-  document.body.style.fontFamily = styleMap[event.target.value];
-});
